@@ -16,37 +16,37 @@ const promptUser = () =>
             name: "projectDescription",
             message: "Project description:"
         },
-        // {
-        //     type: "input",
-        //     name: "projectInstallation",
-        //     message: "Project installation instructions:"
-        // },
-        // {
-        //     type: "input",
-        //     name: "projectUsage",
-        //     message: "Usage infromation:"
-        // },
-        // {
-        //     type: "input",
-        //     name: "projectContribution",
-        //     message: "Contribution guidelines:"
-        // },
-        // {
-        //     type: "input",
-        //     name: "projectTest",
-        //     message: "Project test instructions:"
-        // },
-        // {
-        //     type: "input",
-        //     name: "link",
-        //     message: "Deployed Link:"
-        // },
-        // {
-        //     type: "checkbox",
-        //     name: "link",
-        //     message: "license:",
-        //     choices: ["Apache License 2.0", "MIT License", "Mozzila Public License"]
-        // },
+        {
+            type: "input",
+            name: "projectInstallation",
+            message: "Project installation instructions:"
+        },
+        {
+            type: "input",
+            name: "projectUsage",
+            message: "Usage infromation:"
+        },
+        {
+            type: "input",
+            name: "projectContribution",
+            message: "Contribution guidelines:"
+        },
+        {
+            type: "input",
+            name: "projectTest",
+            message: "Project test instructions:"
+        },
+        {
+            type: "input",
+            name: "link",
+            message: "Deployed Link:"
+        },
+        //{
+         //   type: "checkbox",
+        // name: "link",
+         //   message: "license:",
+        //    choices: ["Apache License 2.0", "MIT License", "Mozzila Public License"]
+        //},
         {
             type: "input",
             name: "github",
@@ -61,21 +61,32 @@ const promptUser = () =>
 
 const generateReadMe = (answers) =>
     `
-### ${answers.projectName}
+# ${answers.projectName}
 
 ### Description 
 ${answers.projectDescription} 
 
 ### Table of Contents
+[Usage](#usage)
+
 ### Installation Instructions
+
+${answers.projectInstallation}
+
+<a name="usage"/>
 ### Usage
+${answers.projectUsage}
+
 ### License
 ### Contributing
+${answers.projectContribution}
+
 ### Tests
+${answers.projectTest}
 
 ### Questions
 Email me at ${answers.email}
-Follow me on Github <a href="${answers.github}">${answers.github}</a>
+Follow me on Github link: <https://${answers.github}> username:${answers.github}
 `
 
 promptUser()
