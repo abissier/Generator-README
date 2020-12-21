@@ -41,12 +41,12 @@ const promptUser = () =>
             name: "link",
             message: "Deployed Link:"
         },
-        //{
-         //   type: "checkbox",
-        // name: "link",
-         //   message: "license:",
-        //    choices: ["Apache License 2.0", "MIT License", "Mozzila Public License"]
-        //},
+        {
+            type: "checkbox",
+            name: "license",
+            message: "If applicable, select a license:",
+            choices: ["Apache License 2.0", "MIT License", "Mozzila Public License", "none"]
+        },
         {
             type: "input",
             name: "github",
@@ -59,37 +59,75 @@ const promptUser = () =>
         },
     ]);
 
-const generateReadMe = (answers) =>
-    `
+let licenseName = "";
+let licenseIcon = "";
+
+const licenseIconFinder = (answers) => {
+
+    if (answers.license[0] === "Apache License 2.0") {
+        licenseName = "This application is covered under the Apache License 2.0"
+        licenseIcon = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+    } else if (answers.license[0] === "MIT License") {
+        licenseName = "This application is covered under the MIT License"
+        licenseIcon = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+    } else if (answers.license[0] === "Mozzila Public License") {
+        licenseName = "This application is covered under the Mozzila Public License"
+        licenseIcon = "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
+    } else {
+        licenseName = ""
+        licenseIcon = ""
+    }
+}
+
+const generateReadMe = (answers) => {
+    console.log(licenseIcon);
+    const readme = `
 # ${answers.projectName}
 
+${licenseIcon}
+${licenseName}
+
+#### Table of Contents
+[Description](#description)
+[Installation](#install)
+[Usage Information](#usage)
+[Contributing](#contributing)
+[Tests](#tests)
+[Questions](#questions)
+
+<a name="description"/>
 ### Description 
 ${answers.projectDescription} 
 
-### Table of Contents
-[Usage](#usage)
-
-### Installation Instructions
-
+<a name="install"/>
+### Installation 
 ${answers.projectInstallation}
 
 <a name="usage"/>
-### Usage
+### Usage Infromation
 ${answers.projectUsage}
 
-### License
+<a name="contributing"/>
 ### Contributing
 ${answers.projectContribution}
 
+<a name="tests"/>
 ### Tests
 ${answers.projectTest}
 
+<a name="questions"/>
 ### Questions
 Email me at ${answers.email}
-Follow me on Github link: <https://${answers.github}> username:${answers.github}
-`
+Follow me on Github link: <https://github.com/${answers.github}> 
+Or search by my GitHub username: username:${answers.github}
+`;
+    return readme;
+}
 
 promptUser()
-    .then((answers) => writeFileAsync('README.md', generateReadMe(answers)))
-    .then(() => console.log('Sucessfully wrote to README'))
+    .then((answers) => {
+        licenseIconFinder(answers);
+        writeFileAsync('README.md', generateReadMe(answers));
+        console.log('Sucessfully wrote to README')
+    })
     .catch((err) => console.log(err));
