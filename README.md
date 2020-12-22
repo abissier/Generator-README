@@ -12,7 +12,7 @@ This application is covered under the Apache License 2.0
 [Tests](#tests)
 [Questions](#questions)
 
-<a name="description"/>
+<a name="description">
 ### Description 
 this app helps users find their next recipe 
 

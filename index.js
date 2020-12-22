@@ -84,7 +84,7 @@ const generateReadMe = (answers) => {
     const readme = `
 # ${answers.projectName}
 
-${licenseIcon}
+${licenseIcon}.
 ${licenseName}
 
 #### Table of Contents
@@ -95,31 +95,31 @@ ${licenseName}
 [Tests](#tests)
 [Questions](#questions)
 
-<a name="description"/>
-### Description 
+<a name="description">
+## Description 
 ${answers.projectDescription} 
 
-<a name="install"/>
-### Installation 
+<a name="install">
+## Installation 
 ${answers.projectInstallation}
 
-<a name="usage"/>
-### Usage Infromation
+<a name="usage">
+## Usage Infromation
 ${answers.projectUsage}
 
-<a name="contributing"/>
-### Contributing
+<a name="contributing">
+## Contributing
 ${answers.projectContribution}
 
-<a name="tests"/>
-### Tests
+<a name="tests">
+## Tests
 ${answers.projectTest}
 
-<a name="questions"/>
-### Questions
-Email me at ${answers.email}
-Follow me on Github link: <https://github.com/${answers.github}> 
-Or search by my GitHub username: username:${answers.github}
+<a name="questions">
+## Questions
+* Email me at ${answers.email}
+* Follow me on Github link: <https://github.com/${answers.github}> 
+* Or search by my GitHub username: username:${answers.github}
 `;
     return readme;
 }
@@ -127,7 +127,7 @@ Or search by my GitHub username: username:${answers.github}
 promptUser()
     .then((answers) => {
         licenseIconFinder(answers);
-        writeFileAsync('README.md', generateReadMe(answers));
+        writeFileAsync('README2.md', generateReadMe(answers));
         console.log('Sucessfully wrote to README')
     })
     .catch((err) => console.log(err));
