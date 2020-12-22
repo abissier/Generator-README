@@ -85,6 +85,7 @@ const generateReadMe = (answers) => {
 # ${answers.projectName}
 
 ${licenseIcon}.
+
 ${licenseName}
 
 #### Table of Contents
@@ -97,26 +98,32 @@ ${licenseName}
 
 <a name="description">
 ## Description 
+
 ${answers.projectDescription} 
 
 <a name="install">
 ## Installation 
+
 ${answers.projectInstallation}
 
 <a name="usage">
 ## Usage Infromation
+
 ${answers.projectUsage}
 
 <a name="contributing">
 ## Contributing
+
 ${answers.projectContribution}
 
 <a name="tests">
 ## Tests
+
 ${answers.projectTest}
 
 <a name="questions">
 ## Questions
+
 * Email me at ${answers.email}
 * Follow me on Github link: <https://github.com/${answers.github}> 
 * Or search by my GitHub username: username:${answers.github}
