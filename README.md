@@ -1,39 +1,18 @@
 
-# Recipe Finder
+# Generator-README
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-This application is covered under the Apache License 2.0
-
-#### Table of Contents
-[Description](#description)
-[Installation](#install)
-[Usage Information](#usage)
-[Contributing](#contributing)
-[Tests](#tests)
-[Questions](#questions)
-
-<a name="description">
 ### Description 
-this app helps users find their next recipe 
+```
+Developers answer a series of questions about their project 
+to generate a thorow and consistent README.
 
-<a name="install"/>
-### Installation 
-na
+This project runs on node.js and uses the Inquirer npm to display user questions. 
+```
 
-<a name="usage"/>
-### Usage Infromation
-na
+### Project Walk-through 
 
-<a name="contributing"/>
-### Contributing
-please pull first
 
-<a name="tests"/>
-### Tests
-na
-
-<a name="questions"/>
-### Questions
-Email me at abg@gmail.com
-Follow me on Github link: <https://github.com/abissier> 
-Or search by my GitHub username: username:abissier
+### GitHub Link
+```
+link: 
+```
