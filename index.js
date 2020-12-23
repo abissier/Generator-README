@@ -8,52 +8,62 @@ const promptUser = () =>
     inquirer.prompt([
         {
             type: "input",
+            prefix: ">",
             name: "projectName",
             message: "Project title:"
         },
         {
             type: "input",
+            prefix: ">",
             name: "projectDescription",
             message: "Project description:"
         },
         {
             type: "input",
+            prefix: ">",
             name: "projectInstallation",
             message: "Project installation instructions:"
         },
         {
             type: "input",
+            prefix: ">",
             name: "projectUsage",
             message: "Usage infromation:"
         },
         {
             type: "input",
+            prefix: ">",
             name: "projectContribution",
             message: "Contribution guidelines:"
         },
         {
             type: "input",
+            prefix: ">",
             name: "projectTest",
             message: "Project test instructions:"
         },
         {
             type: "input",
+            prefix: ">",
             name: "link",
             message: "Deployed Link:"
         },
         {
             type: "checkbox",
+            prefix: ">",
             name: "license",
             message: "If applicable, select a license:",
             choices: ["Apache License 2.0", "MIT License", "Mozzila Public License", "none"]
         },
         {
             type: "input",
+            prefix: ">",
             name: "github",
             message: "Please enter your GitHub username:"
         },
         {
             type: "input",
+            prefix: ">",
             name: "email",
             message: "Please enter your email address (to be displayed):"
         },
