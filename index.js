@@ -112,32 +112,40 @@ ${licenseName}
 [Questions](#questions)
 
 <a name="description">
-## Description 
+Heading level 2
+---------------
+Description 
 
 ${answers.projectDescription} 
 
 <a name="install">
-## Installation 
+Heading level 2
+---------------
+Installation 
 
 ${answers.projectInstallation}
 
 <a name="usage">
-## Usage Infromation
+Heading level 2
+---------------
+Usage Infromation
 
 ${answers.projectUsage}
 
 <a name="contributing">
-## Contributing
+Heading level 2
+---------------
+Contributing
 
 ${answers.projectContribution}
 
 <a name="tests">
-## Tests
+<h2>Tests</h2>
 
 ${answers.projectTest}
 
 <a name="questions">
-## Questions
+<h2>Questions</>
 
 * Email me at ${answers.email}
 * Follow me on Github link: <https://github.com/${answers.github}> 

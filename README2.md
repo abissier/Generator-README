@@ -19,32 +19,40 @@ This application is covered under the Apache License 2.0
 [Questions](#questions)
 
 <a name="description">
-## Description 
+Heading level 2
+---------------
+Description 
 
-This projects allows users to... 
+This project allows users to find recipes given... 
 
 <a name="install">
-## Installation 
+Heading level 2
+---------------
+Installation 
 
-na
+none
 
 <a name="usage">
-## Usage Infromation
+Heading level 2
+---------------
+Usage Infromation
 
-na
+none
 
 <a name="contributing">
-## Contributing
+Heading level 2
+---------------
+Contributing
 
-na
+none
 
 <a name="tests">
-## Tests
+<h2>Tests</h2>
 
-git pull first
+none
 
 <a name="questions">
-## Questions
+<h2>Questions</>
 
 * Email me at abg@gmail.com
 * Follow me on Github link: <https://github.com/abissier> 
