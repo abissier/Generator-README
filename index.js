@@ -94,6 +94,7 @@ const generateReadMe = (answers) => {
 ${licenseIcon}
 
 <h4>Table of Contents</h4>
+
 [Description](#description)
 
 [Installation](#install)
