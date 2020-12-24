@@ -1,7 +1,7 @@
 
 # Recipe Finder
 
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <h4>Table of Contents</h4>
 
@@ -22,12 +22,12 @@
 <a name="description">
 <h3>Description</h3>
 
-This app allows users to find recipes by... 
+This app allows users to finde recipes by... 
 
 <a name="install">
 <h3>Installation</h3>
 
-Use the package manager recipe-website-scraper
+Use the package manager recipe-website-scraper.
 
 <a name="usage">
 <h3>Usage Infromation</h3>
@@ -37,7 +37,7 @@ An app that allows you to get a recipe in object format from a URL.
 <a name="license">
 <h3>License</h3>
 
-
+By contributing, you agree that your contributions will be licensed under its  MIT License
 
 <a name="contributing">
 <h3>Contributing</h3>

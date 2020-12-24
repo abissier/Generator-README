@@ -47,7 +47,7 @@ const promptUser = () =>
             prefix: ">",
             name: "license",
             message: "If applicable, select a license:",
-            choices: ["Apache License 2.0", "MIT License", "Mozzila Public License", "none"]
+            choices: ["Apache License 2.0", "MIT License", "Mozzila Public License", "GNU General Public License v3.0", "none"]
         },
         {
             type: "input",
