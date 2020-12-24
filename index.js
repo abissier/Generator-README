@@ -28,7 +28,7 @@ const promptUser = () =>
             type: "input",
             prefix: ">",
             name: "projectUsage",
-            message: "Usage infromation:"
+            message: "Usage information:"
         },
         {
             type: "input",
@@ -41,12 +41,6 @@ const promptUser = () =>
             prefix: ">",
             name: "projectTest",
             message: "Project test instructions:"
-        },
-        {
-            type: "input",
-            prefix: ">",
-            name: "link",
-            message: "Deployed Link:"
         },
         {
             type: "checkbox",
@@ -75,14 +69,17 @@ let licenseIcon = "";
 const licenseIconFinder = (answers) => {
 
     if (answers.license[0] === "Apache License 2.0") {
-        licenseName = "This application is covered under the Apache License 2.0"
+        licenseName = "By contributing, you agree that your contributions will be licensed under its Apache License 2.0"
         licenseIcon = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
     } else if (answers.license[0] === "MIT License") {
-        licenseName = "This application is covered under the MIT License"
+        licenseName = "By contributing, you agree that your contributions will be licensed under its  MIT License"
         licenseIcon = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
     } else if (answers.license[0] === "Mozzila Public License") {
-        licenseName = "This application is covered under the Mozzila Public License"
+        licenseName = "By contributing, you agree that your contributions will be licensed under its Mozzila Public License"
         licenseIcon = "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
+    } else if (answers.license[0] === "GNU General Public License v3.0") {
+        licenseName = "By contributing, you agree that your contributions will be licensed under its GNU General Public License v3.0"
+        licenseIcon = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
     } else {
         licenseName = ""
         licenseIcon = ""
@@ -96,14 +93,14 @@ const generateReadMe = (answers) => {
 
 ${licenseIcon}
 
-${licenseName}
-
-#### Table of Contents
+<h4>Table of Contents</h4>
 [Description](#description)
 
 [Installation](#install)
 
 [Usage Information](#usage)
+
+[License](#license)
 
 [Contributing](#contributing)
 
@@ -112,44 +109,41 @@ ${licenseName}
 [Questions](#questions)
 
 <a name="description">
-Heading level 2
----------------
-Description 
+<h3>Description</h3>
 
 ${answers.projectDescription} 
 
 <a name="install">
-Heading level 2
----------------
-Installation 
+<h3>Installation</h3>
 
 ${answers.projectInstallation}
 
 <a name="usage">
-Heading level 2
----------------
-Usage Infromation
+<h3>Usage Infromation</h3>
 
 ${answers.projectUsage}
 
+<a name="license">
+<h3>License</h3>
+
+${licenseName}
+
 <a name="contributing">
-Heading level 2
----------------
-Contributing
+<h3>Contributing</h3>
 
 ${answers.projectContribution}
 
 <a name="tests">
-<h2>Tests</h2>
+<h3>Tests</h3>
 
 ${answers.projectTest}
 
 <a name="questions">
-<h2>Questions</>
+<h3>Questions</h3>
 
 * Email me at ${answers.email}
 * Follow me on Github link: <https://github.com/${answers.github}> 
-* Or search by my GitHub username:${answers.github}
+* Or search by my GitHub username: ${answers.github}
 `;
     return readme;
 }
@@ -157,7 +151,7 @@ ${answers.projectTest}
 promptUser()
     .then((answers) => {
         licenseIconFinder(answers);
-        writeFileAsync('README2.md', generateReadMe(answers));
+        writeFileAsync('READMEsample.md', generateReadMe(answers));
         console.log('Sucessfully wrote to README')
     })
     .catch((err) => console.log(err));
