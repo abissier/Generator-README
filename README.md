@@ -15,5 +15,5 @@ This project runs on node.js and uses the Inquirer npm to display user questions
 
 ### GitHub Link
 ```
-link: 
+link: https://github.com/abissier/Generator-README
 ```
