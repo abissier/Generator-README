@@ -11,6 +11,7 @@ This project runs on node.js and uses the Inquirer npm to display user questions
 
 ### Project Walk-through 
 
+![](project-gif.gif)
 
 ### GitHub Link
 ```
