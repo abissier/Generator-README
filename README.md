@@ -4,8 +4,8 @@
 ## Table of Contents
 * [Description](#description)
 * [Technologies Used](#technologies-used)
+* [Project Demo](#project-demo)
 * [Installation Guide](#installation-guide)
-* [Screen Capture](#Screen-Capture)
 * [Contact](#contact)
 
 ### Description 
@@ -15,7 +15,7 @@ to generate a thorough and consistent README.
 ### Technologies Used
 This project runs on Node.js and uses the Inquirer npm to display user questions. 
 
-### Project Walk-through 
+### Project Demo 
 
 ![](project-gif.gif)
 
